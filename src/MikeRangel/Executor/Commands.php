@@ -139,3 +139,4 @@ class Commands extends PluginCommand {
         }
     }
 }
+?>

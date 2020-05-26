@@ -229,3 +229,4 @@ class GlobalEvents implements Listener {
         }
     }
 }
+?>

@@ -14,7 +14,7 @@ abstract class FormAPI implements IForm
 
     protected $data = [];
     private $callable;
-    
+
     public function __construct(?callable $callable)
     {
         $this->callable = $callable;
@@ -53,3 +53,4 @@ abstract class FormAPI implements IForm
         return $this->data;
     }
 }
+?>

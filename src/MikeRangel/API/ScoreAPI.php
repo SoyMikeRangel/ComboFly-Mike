@@ -70,3 +70,4 @@ class ScoreAPI {
 		return isset($this->scoreboards[$pl->getName()]) ? $this->scoreboards[$pl->getName()] : null;
 	}
 }
+?>

@@ -33,3 +33,4 @@ class EntityManager {
 		$human->spawnToAll();
 	}
 }
+?>
