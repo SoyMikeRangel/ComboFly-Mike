@@ -14,4 +14,3 @@ class HumanEntity extends Human {
 		return '';
 	}
 }
-?>

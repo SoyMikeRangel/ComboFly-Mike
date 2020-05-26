@@ -37,14 +37,16 @@ class Arena implements Listener {
         $player = $event->getEntity();
         if ($config->get('arena') != null) {
             if ($player->getLevel() === Server::getInstance()->getLevelByName($config->get('arena'))) {
-                $api = Loader::getScore();
-                $api->remove($player);
-                $player->removeAllEffects();
-                $player->setGamemode(0);
-                $player->setHealth(20);
-                $player->setFood(20);
-                $player->getInventory()->clearAll();
-                $player->getArmorInventory()->clearAll();
+                if ($player instanceof Player) {
+                    $api = Loader::getScore();
+                    $api->remove($player);
+                    $player->removeAllEffects();
+                    $player->setGamemode(0);
+                    $player->setHealth(20);
+                    $player->setFood(20);
+                    $player->getInventory()->clearAll();
+                    $player->getArmorInventory()->clearAll();
+                }
             }
         }
     }
@@ -97,4 +99,3 @@ class Arena implements Listener {
         }
     }
 }
-?>

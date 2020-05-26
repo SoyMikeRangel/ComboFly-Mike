@@ -101,4 +101,3 @@ class Loader extends PluginBase {
 		$this->getLogger()->info(Color::RED . 'Plugin desactivado.');
 	}
 }
-?>

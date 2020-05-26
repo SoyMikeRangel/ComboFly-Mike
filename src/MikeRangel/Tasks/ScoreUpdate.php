@@ -36,4 +36,3 @@ class ScoreUpdate extends Task {
         }
     }
 }
-?>

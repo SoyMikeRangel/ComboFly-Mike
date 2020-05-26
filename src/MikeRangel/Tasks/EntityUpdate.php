@@ -140,4 +140,3 @@ class EntityUpdate extends Task {
 		}
 	}
 }
-?>

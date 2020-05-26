@@ -154,6 +154,9 @@ class GlobalEvents implements Listener {
                 if ($causa instanceof EntityDamageByEntityEvent) {
                     $damager = $causa->getDamager();
                     if ($damager instanceof Player) {
+                        if (Loader::getEconomy() != null) {
+                            Loader::getEconomy()->addMoney($damager, 100);
+                        }
                         $kills = Loader::getConfigs('kills');
                         $kills->set($damager->getName(), $kills->get($damager->getName()) + 1);
                         $kills->save();
@@ -162,7 +165,6 @@ class GlobalEvents implements Listener {
                             $players->getLevel()->addSound(new ClickSound($player));
                         }
                         Server::getInstance()->getLevelByName($damager->getLevel()->getFolderName())->broadcastLevelSoundEvent(new Vector3($damager->getX(), $damager->getY(), $damager->getZ()), LevelSoundEventPacket::SOUND_NOTE);
-                        Loader::getEconomy()->addMoney($damager, 100);
                         $damager->sendMessage(Color::GREEN . 'Has recibido ' . Color::GRAY . '100 ' . Color::GREEN . 'coins!');
                         $damager->setHealth(20);
                         $damager->setFood(20);
@@ -227,4 +229,3 @@ class GlobalEvents implements Listener {
         }
     }
 }
-?>
