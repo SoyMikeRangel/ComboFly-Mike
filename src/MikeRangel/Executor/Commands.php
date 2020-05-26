@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Status: Publico
 */
 namespace MikeRangel\Executor;
-use MikeRangel\{Loader, Entity\EntityManager, Entity\types\HumanEntity, Entity\types\TopsEntity};
+use MikeRangel\{Loader, Events\GlobalEvents, Entity\EntityManager, Entity\types\HumanEntity, Entity\types\TopsEntity};
 use pocketmine\{Server, Player, utils\TextFormat as Color};
 use pocketmine\command\{PluginCommand, CommandSender};
 
@@ -107,7 +107,7 @@ class Commands extends PluginCommand {
             break;
             case 'join':
                 if ($player->getLevel() === Server::getInstance()->getDefaultLevel()) {
-                    Arena::joinGame($player);
+                    GlobalEvents::joinGame($player);
                 } else {
                     $player->sendMessage(Loader::getPrefix() . Color::RED . 'No puedes ejecutar este comando fuera del Lobby.');
                 }
