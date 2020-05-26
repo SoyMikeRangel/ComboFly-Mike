@@ -1,0 +1,7 @@
+#El unico author de este plugin es Mike Rangel, cualquiera que haga un edit no tiene derecho a quitar mis creditos, solo agregar su nombre con un signo de +.
+name: ComboFly
+author: Mike Rangel
+main: MikeRangel\Loader
+version: 2.0.0
+api: [3.0.0, 4.0.0]
+website: 'https:://honorgames.com.mx'
