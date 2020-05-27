@@ -125,7 +125,7 @@ class GlobalEvents implements Listener {
                     switch ($data) {
                         case 0:
                             $player->sendMessage(Color::GRAY . '!Expecting!');
-                            $player->getInventory()->setItem(0, Item::get(399, 0, 1)->setCustomName(Color::BLUE . "Selector\n§o§7CLICK TO VIEW"));
+                            $player->getInventory()->setItem(4, Item::get(399, 0, 1)->setCustomName(Color::BLUE . "Selector\n§o§7CLICK TO VIEW"));
                         break;
                         case 1:
                             self::joinGame($player);
